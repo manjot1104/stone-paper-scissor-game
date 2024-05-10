@@ -53,8 +53,10 @@ const playGame = (userChoice) => {
 };
 
 choices.forEach((choice)=> {
+    console.log(choice);
     choice.addEventListener("click",()  => {
-    const userChoice =choice.getAttribute("id");
+    const userChoice = choice.querySelector("img").id;
+    console.log(userChoice);
     playGame(userChoice); 
     });
 });
